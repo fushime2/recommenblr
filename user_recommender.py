@@ -1,6 +1,5 @@
 from tumblr_manager import TumblrManager, TumblrScraper
 
-print(test)
 
 class UserRecommender(object):
     user_counter = {}
