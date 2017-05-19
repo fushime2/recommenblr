@@ -8,7 +8,7 @@ from tumblpy import Tumblpy
 
 
 class TumblrManager(object):
-    following_users = []
+    following_users = set()
 
     def __init__(self, consumer_key=None, consumer_secret=None, oauth_token=None, oauth_token_secret=None):
         if consumer_key is None or consumer_secret is None or oauth_token is None or oauth_token_secret is None:
@@ -16,13 +16,12 @@ class TumblrManager(object):
         else:
             self.t = Tumblpy(consumer_key, consumer_secret, oauth_token, oauth_token_secret)
 
-    def fetch_urls(self):
+    def fetch_urls(self, LIM=4):
         """
         Fetch urls from user's likes.
-        If you want more urls, increase LIM range 1 to 50 (default 6).
+        If you want more urls, increase LIM range 1 to 50 (default 4).
         :return a list: including urls
         """
-        LIM = 4
         post_urls = []
         for cnt in range(LIM):
             try:
@@ -42,20 +41,19 @@ class TumblrManager(object):
         following = self.t.post("user/following", params={"limit": 1})
         total_blogs = following["total_blogs"]
 
-        user_list = []
+        users = set()
         for i in range(total_blogs // 20 + 2):
             blogs = self.fetch_blogs(offset=20 * i)
             for user in blogs:
-                user_list.append(user)
+                users.add(user)
 
-        ret = list(set(user_list))
-        return ret
+        return users
 
     def fetch_blogs(self, offset=0):
         try:
             following = self.t.post("user/following", params={"offset": offset})
         except:
-            return
+            return []
         blogs = following["blogs"]
         ret = [blog["name"] for blog in blogs]
         return ret
