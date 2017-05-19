@@ -21,7 +21,6 @@ class UserRecommender(object):
     def set_counter(self):
         url_list = self.tm.fetch_urls()
         all_users = self.ts.fetch_users_from_url(url_list)
-        # non_followed_users = list(filter(lambda x: not self.tm.is_following(x), all_users))
         for user in all_users:
             self.add_user(user)
 
