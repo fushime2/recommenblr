@@ -13,31 +13,30 @@ Find users having similar preferences.
 # Usage
 1. Edit `conf.txt`
 
-set 4 lines `consumer key`, `consumer secret`, `oauth token` and `oauth token secret` in `conf.txt`
+	set 4 lines `consumer key`, `consumer secret`, `oauth token` and `oauth token secret` in `conf.txt`
 
 2. Run
 
-`python recommenblr.py`
+	`python recommenblr.py`
 
-An example of output.
-
-```
-http://metyashiko.tumblr.com/
-http://sagiri-izumi.tumblr.com/
-http://dezaki.tumblr.com/
-http://man-nona.tumblr.com/
-http://hkdmz.tumblr.com/
-http://oworion.tumblr.com/
-http://0ni-chan.tumblr.com/
-http://zsaber.tumblr.com/
-http://simplykasumi.tumblr.com/
-http://relatablepicturesofwatanabeyou.tumblr.com/
-http://nonging.tumblr.com/
-http://aoiikawaii.tumblr.com/
-http://the-coffin-princess.tumblr.com/
-http://malmrashede.tumblr.com/
-http://girlslovemyping.tumblr.com/
-```
+	An example of output.
+	```
+    http://metyashiko.tumblr.com/
+    http://sagiri-izumi.tumblr.com/
+    http://dezaki.tumblr.com/
+    http://man-nona.tumblr.com/
+    http://hkdmz.tumblr.com/
+    http://oworion.tumblr.com/
+    http://0ni-chan.tumblr.com/
+    http://zsaber.tumblr.com/
+    http://simplykasumi.tumblr.com/
+    http://relatablepicturesofwatanabeyou.tumblr.com/
+    http://nonging.tumblr.com/
+    http://aoiikawaii.tumblr.com/
+    http://the-coffin-princess.tumblr.com/
+    http://malmrashede.tumblr.com/
+    http://girlslovemyping.tumblr.com/
+	```
 
 # License
 MIT License
