@@ -3,14 +3,14 @@ Recommendation tools for Tumblr users.
 
 Find users having similar preferences.
 
-# Requirements
+## Requirements
 - Python 3
 - BeautifulSoup 4
 - [Tumblpy](https://github.com/michaelhelmick/python-tumblpy)
 - consumer key, consumer secret, oauth token and oauth token secret of Tumblr
   - https://www.tumblr.com/oauth/apps
 
-# Usage
+## Usage
 1. Edit `conf.txt`
 
 	set 4 lines `consumer key`, `consumer secret`, `oauth token` and `oauth token secret` in `conf.txt`
@@ -38,5 +38,5 @@ Find users having similar preferences.
     http://girlslovemyping.tumblr.com/
 	```
 
-# License
+## License
 MIT License
